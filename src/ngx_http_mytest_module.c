@@ -87,6 +87,29 @@ static ngx_int_t ngx_http_mytest_handler2(ngx_http_request_t* r){
 }
 
 /*
+struct ngx_conf_s  {
+    char                   *name;
+    ngx_array_t          *args;
+    ngx_cycle_t          *cycle;
+    ngx_pool_t           *pool;
+    ngx_pool_t           *temp_pool;
+    ngx_conf_file_t     *conf_file;
+    ngx_log_t            *log;
+    void                   *ctx;
+    ngx_uint_t           module_type;
+    ngx_uint_t            cmd_type;
+    ngx_conf_handler_pt      handler;
+    char                   *handler_conf;
+};
+typedef struct ngx_array_s       ngx_array_t;
+struct ngx_array_s {
+    void        *elts;
+    ngx_uint_t   nelts;
+    size_t       size;
+    ngx_uint_t   nalloc;
+    ngx_pool_t  *pool;
+};
+
 #define ngx_http_conf_get_module_loc_conf(cf, module) \
     ((ngx_http_conf_ctx_t *) cf->ctx)->loc_conf[module.ctx_index]
 */
