@@ -69,8 +69,7 @@ struct ngx_command_s{
 static ngx_command_t ngx_http_mytest_commands[] = {
 	{
 		ngx_string("mytest"),
-		NGX_HTTP_MAIN_CONF | NGX_HTTP_SRV_CONF | NGX_HTTP_LOC_CONF | NGX_HTTP_LMT_CONF | NGX_
-		CONF_NOARGS,
+		NGX_HTTP_MAIN_CONF | NGX_HTTP_SRV_CONF | NGX_HTTP_LOC_CONF | NGX_HTTP_LMT_CONF | NGX_CONF_NOARGS,
 		ngx_http_mytest,
 		NGX_HTTP_LOC_CONF_OFFSET,
 		0,
@@ -80,7 +79,7 @@ static ngx_command_t ngx_http_mytest_commands[] = {
 };
 
 ngx_module_t ngx_http_mytest_module = {
-	NGX_MOUDLE_V1,
+	NGX_MODULE_V1,
 	&ngx_http_mytest_module_ctx,
 	ngx_http_mytest_commands,
 	NGX_HTTP_MODULE,
@@ -91,5 +90,5 @@ ngx_module_t ngx_http_mytest_module = {
 	NULL,
 	NULL,
 	NULL,
-	NGX_MOUDLE_V1_PADDING
+	NGX_MODULE_V1_PADDING
 };
