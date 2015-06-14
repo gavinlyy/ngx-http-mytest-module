@@ -115,7 +115,7 @@ struct ngx_array_s {
 */
 static char* ngx_http_mytest(ngx_conf_t* cf, ngx_command_t* cmd, void* conf)
 {
-	if(cf->args->nelts < 1){
+	if(cf->args->nelts < 2){
 		return NGX_CONF_ERROR;
 	}
 	ngx_http_core_loc_conf_t* clcf;
